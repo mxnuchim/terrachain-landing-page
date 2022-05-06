@@ -17,8 +17,7 @@ const Navbar = () => {
           <p><a href="#home">Home</a></p>
           <p><a href="#wgpt3">What is Terrachain?</a></p>
           <p><a href="#possibility">Possibilities</a></p>
-          <p><a href="#features">Case Studies</a></p>
-          <p><a href="#blog">Library</a></p>
+          <p><a href="#features">Services</a></p>
         </div>
       </div>
       <div className="terrachain__navbar-sign">
@@ -35,8 +34,7 @@ const Navbar = () => {
             <p><a href="#home">Home</a></p>
             <p><a href="#wgpt3">What is Terrachain?</a></p>
             <p><a href="#possibility">Possibilities</a></p>
-            <p><a href="#features">Case Studies</a></p>
-            <p><a href="#blog">Library</a></p>
+            <p><a href="#features">Services</a></p>
           </div>
           <div className="terrachain__navbar-menu_container-links-sign">
             <p>Sign in</p>
