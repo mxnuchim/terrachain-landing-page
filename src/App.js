@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Footer, Blog, Possibility, Features, WhatTerrachain, Header } from './containers'
-import { Cta, Brand, Navbar } from './components'
+import { Footer, Possibility, Features, WhatTerrachain, Header } from './containers'
+import { Cta, Navbar } from './components'
 import './App.css'
 
 
@@ -16,10 +16,9 @@ const App = () => {
       <Features />
       <Possibility />
       <Cta />
-      <Blog />
       <Footer />
     </div>
   )
 }
 
-export default App
+export default App;
