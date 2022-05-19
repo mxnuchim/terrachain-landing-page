@@ -5,7 +5,7 @@ import './Header.css';
 const Header = () => (
   <div className="gpt3__header section__padding" id="home">
     <div className="gpt3__header-content">
-      <h1 className="gradient__text">Buy and secure your land ownership with Terrachain</h1>
+      <h1 className="gradient__text">Buy land and secure your ownership with Terrachain</h1>
       <p>Purchase land securely and ensure the authenticity and uniqueness of your purchase on the blockchain and instantly verify land title ownership.</p>
 
       <div className="gpt3__header-content__input">
