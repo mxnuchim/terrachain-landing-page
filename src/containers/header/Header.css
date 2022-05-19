@@ -47,7 +47,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    background: var(--color-footer);
+    background: #03429a;
     border: 2px solid var(--color-footer);
     padding: 0 1rem;
     outline: none;
@@ -74,6 +74,17 @@
 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.gpt3__header-content__input button:hover {
+    transition: transform 750ms;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.gpt3__header-content__input input:hover {
+    transition: transform 750ms;
+    transform: scale(1.2);
 }
 
 .gpt3__header-content__people {

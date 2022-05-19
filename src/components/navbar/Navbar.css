@@ -21,8 +21,8 @@
 }
 
 .terrachain__navbar-links_logo img {
-    width: 200px;
-    height: 80px;
+    width: 180px;
+    height: 90px;
 }
 
 .terrachain__navbar-links_container {
@@ -50,6 +50,13 @@
     cursor: pointer;
 }
 
+.terrachain__navbar-links_container p:hover {
+    transition: transform 750ms;
+    will-change: transform;
+    transform: translateY(-10px);
+    color: #07f045;
+}
+
 .terrachain__navbar-sign button,
 .terrachain__navbar-menu_container button {
     padding: 0.5rem 1rem;
@@ -63,7 +70,16 @@
     outline: none;
     cursor: pointer;
     border-radius: 5px;
+    
 }
+
+.terrachain__navbar-sign button:hover {
+    transition: transform 750ms;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
 
 .terrachain__navbar-menu {
     margin-left: 1rem;
@@ -83,7 +99,7 @@
     flex-direction: column;
     
     text-align: end;
-    background: var(--color-footer);
+    background: #074294;
     padding: 2rem;
     position: absolute;
     right: 0;

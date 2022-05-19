@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css'
-import terraLogo from '../../assets/terraLogo.png'
+import terraLogo from '../../assets/terraLogo.svg'
 
 
 const Navbar = () => {

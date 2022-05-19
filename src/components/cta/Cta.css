@@ -7,7 +7,7 @@
     padding: 2rem;
     margin: 4rem;
     border-radius: 1rem;
-    background: #0919c2;
+    background: var(--gradient-bar)
 }
 
 .gpt3__cta-content {
@@ -40,8 +40,15 @@
     margin-left: 2rem;
 }
 
+.gpt3__cta-btn:hover {
+    transition: transform 750ms;
+    transform: scale(1.2);
+    opacity: 1;
+    color: #07f045;
+}
+
 .gpt3__cta-btn button {
-    background: #2dcd58;
+    background: #2cdc58;
     color: #fff;
     font-family: var(--font-family);
     font-weight: 700;

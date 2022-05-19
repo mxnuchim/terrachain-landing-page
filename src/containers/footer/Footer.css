@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 
-    background:#0919c2;
+    background: var(--color-footer);
 }
 
 .gpt3__footer-heading {
@@ -34,6 +34,12 @@
     cursor: pointer;
 }
 
+.gpt3__cta-btn:hover {
+    transition: transform 750ms;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
 .gpt3__footer-btn p {
     font-size: 18px;
     font-family: var(--font-family);
@@ -61,13 +67,11 @@
 .gpt3__footer-links_logo {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family);
-    font-weight: 500;
 }
 
 .gpt3__footer-links_logo img {
-    width: 150px;
-    height: 80px;
+    width: 118px;
+    height: 30px;
 
     margin-bottom: 1rem;
 }
@@ -89,7 +93,7 @@
     font-size: 14px;
     line-height: 17px;
     font-family: var(--font-family);
-    color: #2dcd58;
+    color: #0af846;
 
     margin-bottom: 0.9rem;
 }
