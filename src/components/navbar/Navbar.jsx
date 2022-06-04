@@ -2,10 +2,17 @@ import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css'
 import terraLogo from '../../assets/terraLogo.png'
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const navigate = useNavigate();
+   const handleOnClick =()=>{
+   navigate("/SignIn")
+   };
+
 
   return (
     <div className="terrachain__navbar">
@@ -21,7 +28,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="terrachain__navbar-sign">
-        <p>Sign in</p>
+        <p type='button' onClick={handleOnClick}>Sign in</p>
         <button type="button">Sign up</button>
       </div>
       <div className="terrachain__navbar-menu">
