@@ -39,9 +39,6 @@ form {
     background-color: white;
 }
 
-a, a:visited {
-    color: #000;
-}
 
 input[type="text"],
 input[type="password"],

@@ -102,7 +102,7 @@ function SignIn() {
                         Need an Account?<br />
                         <span className="line">
                             {/*put router link here*/}
-                            <a href="/Register" onClick = {handleOnRegisterClick}>Sign Up</a>
+                            <a style={{color: 'black',}} href="/Register" onClick = {handleOnRegisterClick}>Sign Up</a>
                         </span>
                     </p>
                 </div>

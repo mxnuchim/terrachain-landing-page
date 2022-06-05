@@ -172,7 +172,7 @@ const Register = () => {
                         Already registered?<br />
                         <Link to="/SignIn" >
                             <span className="line">
-                                <a href="#SignIn">Sign In</a>
+                                <a style={{color: 'black',}} href="#SignIn">Sign In</a>
                             </span>
                         </Link>
                     </p>
