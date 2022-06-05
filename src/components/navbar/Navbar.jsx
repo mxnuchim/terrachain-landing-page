@@ -12,6 +12,9 @@ const Navbar = () => {
    const handleOnClick =()=>{
    navigate("/SignIn")
    };
+   const handleOnRegisterClick =()=>{
+   navigate("/Register")
+   };
 
 
   return (
@@ -29,7 +32,7 @@ const Navbar = () => {
       </div>
       <div className="terrachain__navbar-sign">
         <p type='button' onClick={handleOnClick}>Sign in</p>
-        <button type="button">Sign up</button>
+        <button type="button" onClick={handleOnRegisterClick}>Sign up</button>
       </div>
       <div className="terrachain__navbar-menu">
         {toggleMenu
@@ -44,8 +47,8 @@ const Navbar = () => {
             <p><a href="#features">Services</a></p>
           </div>
           <div className="terrachain__navbar-menu_container-links-sign">
-            <p>Sign in</p>
-            <button type="button">Sign up</button>
+            <p onClick={handleOnClick}>Sign in</p>
+            <button type="button" onClick={handleOnRegisterClick}>Sign up</button>
           </div>
         </div>
         )}
