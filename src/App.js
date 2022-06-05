@@ -4,6 +4,7 @@ import { Footer, Possibility, Features, WhatTerrachain, Header } from './contain
 import { Cta, Navbar } from './components'
 import './App.css'
 import SignIn from './components/Pages/SignIn'
+import Register from './components/Pages/Register'
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ const App = () => {
       </div>
       <Routes>
         <Route exact path="/SignIn" element={<SignIn />} />
+        <Route exact path="/Register" element={<Register />} />
       </Routes>
       <WhatTerrachain />
       <Features />

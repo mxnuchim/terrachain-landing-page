@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "../../context/AuthProvider";
 import './SignIn.css';
 import axios from '../../api/axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const LOGIN_URL = '/auth';
@@ -23,6 +24,11 @@ function SignIn() {
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd])
+
+    const navigate = useNavigate();
+    const handleOnRegisterClick =()=>{
+        navigate("/Register")
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -63,7 +69,7 @@ function SignIn() {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="#">Go to Home</a>
+                        <a href="#home">Go to Home</a>
                     </p>
                 </section>
             ) : (
@@ -96,7 +102,7 @@ function SignIn() {
                         Need an Account?<br />
                         <span className="line">
                             {/*put router link here*/}
-                            <a href="#">Sign Up</a>
+                            <a href="/Register" onClick = {handleOnRegisterClick}>Sign Up</a>
                         </span>
                     </p>
                 </div>
