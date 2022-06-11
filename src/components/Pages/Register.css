@@ -30,6 +30,25 @@ section {
     border-radius: 10px;
 }
 
+select
+{
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+    font-family: Ouhod, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    border: 1px solid;
+    padding: 0 1rem;
+    outline: none;
+    color: #010b0f;  
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -75,6 +94,12 @@ label,
 button {
   margin-top: 1rem;
   color: #000;
+}
+
+div{
+    margin-top: 1rem;
+    color: #000;
+
 }
 
 button{

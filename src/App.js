@@ -13,12 +13,12 @@ const App = () => {
     <div className='App'>
       <div className='gradient__bg'>
         <Navbar />
+        <Routes>
+          <Route exact path="/SignIn" element={<SignIn />} />
+          <Route exact path="/Register" element={<Register />} />
+        </Routes>
         <Header />
       </div>
-      <Routes>
-        <Route exact path="/SignIn" element={<SignIn />} />
-        <Route exact path="/Register" element={<Register />} />
-      </Routes>
       <WhatTerrachain />
       <Features />
       <Possibility />

@@ -14,6 +14,7 @@ const Register = () => {
     const [firstName, setfirstName] = useState('');
     const [lastName, setlastName] = useState('');
     const [email, setEmail] = useState('');
+    const [registrationNumber, setRegistrationNumber] = useState('');
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -25,6 +26,14 @@ const Register = () => {
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const [showhide, setShowhide] = useState('');
+
+
+    const handleshowhide = (event) => {
+        const getuser = event.target.value;
+        setShowhide(getuser);
+    }
 
     useEffect(() => {
         userRef.current.focus();
@@ -49,7 +58,7 @@ const Register = () => {
         }
         try {
             const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ firstName, lastName, email, pwd }),
+                JSON.stringify({ firstName, lastName, email, pwd,registrationNumber }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
@@ -65,6 +74,7 @@ const Register = () => {
             setlastName('');
             setPwd('');
             setMatchPwd('');
+            setRegistrationNumber('');
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -91,6 +101,11 @@ const Register = () => {
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <h1>Register</h1>
                     <form onSubmit={handleSubmit}>
+                        <select onChange={(e) => (handleshowhide(e))}>
+                            <option selected value="Vendor">Vendor</option>
+                            <option value="GovernmentAgent" >Government agent</option>
+                        </select>
+
                         <label htmlFor="firstName">
                             First Name:
                         </label>
@@ -114,18 +129,17 @@ const Register = () => {
                             required
                         />
 
-                        <label htmlFor="email">
-                            Email:
-                        </label>
-                        <input
-                            type="text"
-                            id="email"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-
+                            <label htmlFor="email">
+                                Email:
+                            </label>
+                            <input
+                                type="text"
+                                id="email"
+                                ref={userRef}
+                                autoComplete="off"
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
 
                         <label htmlFor="password">
                             Password:
@@ -147,7 +161,6 @@ const Register = () => {
                             Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
                         </p>
 
-
                         <label htmlFor="confirm_pwd">
                             Confirm Password:
                         </label>
@@ -165,6 +178,23 @@ const Register = () => {
                         <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
                             Must match the first password input field.
                         </p>
+                        {
+                            showhide === 'GovernmentAgent' && (
+                                <div>
+                                    <label htmlFor="registrationNumber">
+                                        Registration Number:
+                                    </label>
+                                    <input style={{ visibility: false }}
+                                        name="registration_number"
+                                        type="text"
+                                        id="registrationNumber"
+                                        ref={userRef}
+                                        autoComplete="off"
+                                        onChange={(e) => setRegistrationNumber(e.target.value)}
+                                        required
+                                    />
+                                </div>
+                            )}
 
                         <button disabled={!validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
@@ -172,7 +202,7 @@ const Register = () => {
                         Already registered?<br />
                         <Link to="/SignIn" >
                             <span className="line">
-                                <a style={{color: 'black',}} href="#SignIn">Sign In</a>
+                            <a style={{color: 'black',}} href="#SignIn">Sign In</a>
                             </span>
                         </Link>
                     </p>
